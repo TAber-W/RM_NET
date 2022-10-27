@@ -2,9 +2,11 @@ import numpy as np
 import argparse
 import cv2
 import os
+from rm_dataset.process_c import get_yaml_data
 
 def run(cfg='data/4_point.yaml'):
-    pass
+    cls_num,cls_name,train_path,val_path = get_yaml_data(cfg)
+    
 
 def parse_opt():
     parser = argparse.ArgumentParser()

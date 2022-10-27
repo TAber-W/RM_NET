@@ -3,6 +3,19 @@ import numpy as np
 import random
 import math
 import cv2
+import yaml
+
+def get_yaml_data(yaml_file):
+    print("*****获取yaml数据*****")
+    with open(yaml_file, encoding='utf-8')as file:
+        content = file.read()
+        data = yaml.load(content, Loader=yaml.FullLoader)
+        class_num = data.get('nc')
+        class_name = data.get('names')
+        train_pth = data.get('train')
+        val_pth = data.get('val')
+        return class_num,class_name,train_pth,val_pth
+
 
 def xywhn2xyxy(x, w=640, h=640, padw=0, padh=0):
     # Convert nx4 boxes from [x, y, w, h] normalized to [x1, y1, x2, y2] where xy1=top-left, xy2=bottom-right
