@@ -1,0 +1,11 @@
+# 4_point dataset https://github.com/TAber-W/RobomasterDataset
+
+# train and val data  directory
+train: /root/R/yolov5-face-master/data/test_data/train
+val: /root/R/yolov5-face-master/data/test_data/val
+
+# number of classes
+nc: 36
+
+# class names
+names: ['BG','B1','B2','B3','B4','B5','BO','BBs','BBb','RG','R1','R2','R3','R4','R5','RO','RBs','RBb','NG','N1','N2','N3','N4','N5','NO','NBs','NBb','PG','P1','P2','P3','P4','P5','PO','PBs','PBb']
