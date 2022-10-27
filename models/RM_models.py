@@ -2,7 +2,6 @@ import torch
 import torch.nn as nn
 
 
-
 # ---------------------------- MobileBlock start -------------------------------
 class h_sigmoid(nn.Module):
     def __init__(self, inplace=True):
