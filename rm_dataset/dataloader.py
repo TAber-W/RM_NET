@@ -2,6 +2,7 @@ import random
 import cv2
 import numpy as np
 from process_c import xyn2xy,xywhn2xyxy,random_perspective,copy_paste
+from torch.utils.data import Dataset, DataLoader
 
 class Load_img:
 
@@ -79,3 +80,11 @@ class Load_img:
                                            border=self.mosaic_border)  # border to remove
 
         return img4, labels4
+
+class my_Dataset(Dataset):
+    def __init__(self, root_dir, image_dir, label_dir, transform):
+        pass
+    def __getitem__(self, idx):
+        pass
+    def __len__(self):
+        pass

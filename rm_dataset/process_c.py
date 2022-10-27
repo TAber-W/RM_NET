@@ -6,7 +6,6 @@ import cv2
 import yaml
 
 def get_yaml_data(yaml_file):
-    print("*****获取yaml数据*****")
     with open(yaml_file, encoding='utf-8')as file:
         content = file.read()
         data = yaml.load(content, Loader=yaml.FullLoader)
